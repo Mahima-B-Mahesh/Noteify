@@ -99,7 +99,5 @@ Add pagination for notes
 
 Add file/image attachments
 
-Add dark mode
-
 👩‍💻 Author
 Built by Mahima B Mahesh ✨
