@@ -1,0 +1,103 @@
+.addnote-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+}
+
+.addnote-heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.addnote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addnote-input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  transition: border 0.2s;
+}
+.addnote-input:focus {
+  border: 1px solid #3b82f6;
+}
+
+.addnote-textarea {
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+  transition: border 0.2s;
+}
+.addnote-textarea:focus {
+  border: 1px solid #3b82f6;
+}
+
+.addnote-select {
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.addnote-button {
+  padding: 12px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.addnote-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+.addnote-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* About / AddNote Dark Mode */
+body.dark .addnote-container {
+  background: #111827; /* dark background */
+  color: #f3f4f6;      /* default text color */
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+body.dark .addnote-heading {
+  color: #60a5fa; /* blue accent heading */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body.dark .addnote-container p {
+  color: #d1d5db; /* paragraph text */
+}
+
+body.dark .addnote-container ul {
+  color: #e5e7eb; /* list text */
+}
+
+body.dark .addnote-container ul li {
+  margin-bottom: 8px;
+}

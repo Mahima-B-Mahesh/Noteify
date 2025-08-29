@@ -1,0 +1,81 @@
+/* NoteCard.css */
+.note-card {
+  width: 280px;              /* fixed width */
+  min-height: 150px;
+  max-height: 200px;         /* so it doesn’t grow endlessly */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 15px;
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Title */
+.note-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  white-space: nowrap;       /* keep in one line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Body preview */
+.note-body {
+  font-size: 14px;
+  color: #555;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;     /* ✅ only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Category tag */
+.note-category {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+  background: #f1f1f1;
+  padding: 2px 8px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+/* Dark Mode for NoteCard */
+body.dark .note-card {
+  background: #1f2937; /* dark gray */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  color: #f3f4f6; /* default text color */
+}
+
+body.dark .note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+body.dark .note-title {
+  color: #e5e7eb; /* lighter text */
+}
+
+/* Body preview */
+body.dark .note-body {
+  color: #d1d5db;
+}
+
+/* Category tag */
+body.dark .note-category {
+  color: #f3f4f6;
+  background: #374151; /* darker tag background */
+}

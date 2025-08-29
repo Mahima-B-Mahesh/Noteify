@@ -1,0 +1,97 @@
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background: #f9fafb;
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #d1d5db;
+}
+
+.filter-btn.active {
+  background: #4a90e2;
+  color: white;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.note-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.note-category {
+  font-size: 12px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-top: 8px;
+  display: inline-block;
+}
+/* Dark Mode Styling */
+body.dark .filter-bar {
+  background: #1f2937; /* dark gray */
+  border-bottom: 1px solid #374151;
+}
+
+body.dark .filter-btn {
+  background: #374151;
+  color: #d1d5db;
+}
+
+body.dark .filter-btn:hover {
+  background: #4b5563;
+}
+
+body.dark .filter-btn.active {
+  background: #2563eb; /* blue accent stays same */
+  color: white;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+body.dark .notes-list {
+  background: #111827; /* dark background for grid */
+  padding: 20px;
+}
+
+body.dark .note-card {
+  background: #1f2937; /* dark gray card */
+  border: 1px solid #374151;
+  color: #f3f4f6; /* light text */
+}
+
+body.dark .note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .note-category {
+  color: #60a5fa; /* lighter blue for category */
+}
